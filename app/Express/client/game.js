@@ -12,9 +12,9 @@ var main = function () {
     var url = "http://localhost:3000/listdb";
 
     $.getJSON(url, function(data) {
-        $("h3").html("Top Visited URLs<br>");
-        for(var i=0;i<data.length;i++) {
-            $("h3").append("http://localhost:3000/" + data[i].short + " - Views: " + data[i].views + "<br>");
+        $("h3").html("Top 10 Visited URLs<br>");
+        for(var i=0;i<10;i++) {
+            $("h3").append("http://localhost:3000/" + data[i].shorturl + " - Views: " + data[i].views + "<br>");
         }
     });
 };
